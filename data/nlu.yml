@@ -1,100 +1,33 @@
 version: "3.1"
 
 nlu:
+
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
+    - Hello 
+    - Hi
+- intent: task
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Show my account balance
+    - What is my account details ?
+    - Account Details
+    - Show my balance
+    - What is my balance
 
 - intent: check_balance
   examples: |
-    - My name is [Alice](name) and my account number is [1234567890](account_number)
-    - Account: [0987654321](account_number), I'm Bob
-    - [1234567890](account_number) belongs to me, Alice
-    - I'm Bob, my balance is [2000](balance)
-    - My name is [Alice](name)
-    - My name is [Alice](name), my account number is [1234567890](account_number), and my balance is [1000](balance)
+    - My name is [Babim](name) and my account number is [1234567890](account_number)
+    - Account: [0987654321](account_number), I'm Bishal
+    - [1234567890](account_number) belongs to me, Babim
+    - I'm Bishal, my balance is [2000](balance)
+    - My name is [Babim](name)
+    - My name is [Babim](name), my account number is [1234567890](account_number), and my balance is [1000](balance)
+    - Phone number is [9846863138](phone) , Babim
+    - Phone number is [9804109276](phone) , Bishal
+
+- intent: transaction_history
+  examples: |
+    - Show my transaction history
+    - Can I see my transactions?
+    - What are my recent transactions?
+    - Display my transaction history 

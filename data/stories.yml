@@ -1,35 +1,21 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story:
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: greet
+    - action: utter_greet
+    - intent: task
+    - action: utter_task
 
-- story: sad path 1
+- story: balance
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - intent: check_balance
+    - action: action_check_balance  
 
-- story: sad path 2
+- story: show transaction
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: transaction_history
+    - action: utter_transaction
 
-- story: check_balance
-  steps:
-  - intent: check_balance
-  - action: action_check_balance
+  

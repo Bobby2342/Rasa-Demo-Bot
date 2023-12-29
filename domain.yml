@@ -2,18 +2,20 @@ version: "3.1"
 
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - task
   - check_balance
+  - transaction_history
+
+  
+
 
 entities:
   - name
   - account_number
   - balance
+  - phone
+
+  
   
 
 slots:
@@ -36,28 +38,24 @@ slots:
       - type: from_entity
         entity: balance
 
+  phone:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: phone
+
+
 responses:
   utter_greet:
-  - text: "Hey! Welcome To Demo Bot Give your account details ?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: " Hi how can I help you ? "
+  utter_task:
+  - text: "Okay sure Can you provide your account number ?"
+  utter_transaction:
+  - text: "You have withdraw Rs. 1000  yesterday \n You have deposited Rs2000 today "
 
 actions:
   - action_check_balance
+
 
 session_config:
   session_expiration_time: 60
