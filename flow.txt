@@ -1,0 +1,8 @@
+User: hi
+Bot : Welcome to Bank Bot ! How can I help you ?
+
+user: I want account details 
+Bot: Sure Provide your account details 
+
+User : {account details}
+Bot: {call action_check_balance }

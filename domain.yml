@@ -1,0 +1,64 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_balance
+
+entities:
+  - name
+  - account_number
+  - balance
+  
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+
+  account_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: account_number
+
+
+  balance:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: balance
+
+responses:
+  utter_greet:
+  - text: "Hey! Welcome To Demo Bot Give your account details ?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_check_balance
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
