@@ -38,8 +38,7 @@ class ActionCheckBalance(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         account_number = tracker.get_slot("account_number")
-
-        # Your database or dictionary with user information (replace this with your actual database)
+        #database dictionary 
         database = {
             "1234567890": {"name": "Alice", "balance": 1000},
             "0987654321": {"name": "Bob", "balance": 2000}
